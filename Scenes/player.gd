@@ -8,17 +8,6 @@ var gravity: float = float(
 	ProjectSettings.get_setting("physics/2d/default_gravity")
 )
 
-func _ready() -> void:
-	var body_visual = get_node_or_null("Polygon2D")
-	if body_visual:
-		body_visual.polygon = PackedVector2Array([
-			Vector2(-16, -64),
-			Vector2(16, -64),
-			Vector2(16, 0),
-			Vector2(-16, 0)
-		])
-		body_visual.color = Color.DODGER_BLUE
-
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
