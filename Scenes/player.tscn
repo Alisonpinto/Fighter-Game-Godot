@@ -3,14 +3,23 @@
 [ext_resource type="Script" uid="uid://cimuiq0lgclpe" path="res://Scenes/player.gd" id="1_v0iea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibwjd"]
-size = Vector2(32, 64)
+size = Vector2(40, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv3hv"]
+size = Vector2(45, 35)
 
 [node name="Player" type="CharacterBody2D" unique_id=2068640700]
 script = ExtResource("1_v0iea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1559931775]
-position = Vector2(0, -32)
+position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_ibwjd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1495139869]
-position = Vector2(300, 450)
+position = Vector2(3, -170)
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=749680378]
+
+[node name="AttackArea" type="CollisionShape2D" parent="AttackArea" unique_id=585508151]
+position = Vector2(35, -35)
+shape = SubResource("RectangleShape2D_jv3hv")

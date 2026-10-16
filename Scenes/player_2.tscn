@@ -4,7 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://b4ljx2si62wlt" path="res://Assets/char2_idle.png" id="2_cgts5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibwjd"]
-size = Vector2(32, 64)
+size = Vector2(40, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv3hv"]
+size = Vector2(35, 35)
 
 [node name="Player 2" type="CharacterBody2D" unique_id=640260740]
 script = ExtResource("1_cgts5")
@@ -14,4 +17,10 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_cgts5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1994708353]
+position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_ibwjd")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=992405032]
+
+[node name="AttackArea" type="CollisionShape2D" parent="AttackArea" unique_id=1571476515]
+shape = SubResource("RectangleShape2D_jv3hv")

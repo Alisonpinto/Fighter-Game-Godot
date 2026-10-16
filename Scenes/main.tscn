@@ -9,33 +9,51 @@
 size = Vector2(1152, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeooa"]
-size = Vector2(12, 64)
+size = Vector2(1669, 64)
 
 [node name="Main" type="Node2D" unique_id=58591627]
 
 [node name="World" type="Node2D" parent="." unique_id=1220645774]
 
 [node name="background" type="Sprite2D" parent="World" unique_id=1572295564]
-position = Vector2(576, 324)
+position = Vector2(602, 303)
 scale = Vector2(4, 4)
 texture = ExtResource("1_jjgbg")
 
 [node name="Ground" type="StaticBody2D" parent="World" unique_id=1516423514]
-position = Vector2(576, 476)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Ground" unique_id=2014705440]
+position = Vector2(600, 444)
 shape = SubResource("RectangleShape2D_ibwjd")
 
 [node name="Player" parent="World" unique_id=2068640700 instance=ExtResource("2_bo1nx")]
 position = Vector2(250, 475)
 
 [node name="Sprite2D2" type="Sprite2D" parent="World/Player" unique_id=1433702800]
+position = Vector2(3, -170)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_jjvhh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Player" unique_id=848504014]
-position = Vector2(22, 0)
 shape = SubResource("RectangleShape2D_yeooa")
 
 [node name="Player 2" parent="World" unique_id=640260740 instance=ExtResource("3_8gbba")]
-position = Vector2(850, 475)
+position = Vector2(946, 314)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1067665701]
+
+[node name="ProgressBarP2" type="ProgressBar" parent="HUD" unique_id=1888234145]
+offset_left = 752.0
+offset_top = 26.0
+offset_right = 1102.0
+offset_bottom = 53.0
+value = 100.0
+fill_mode = 1
+
+[node name="ProgressBarP1" type="ProgressBar" parent="HUD" unique_id=968160815]
+offset_left = 57.0
+offset_top = 24.0
+offset_right = 407.0
+offset_bottom = 51.0
+value = 100.0
+fill_mode = 1
