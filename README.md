@@ -30,13 +30,17 @@ Player 2:
 
 ## Screenshots
 
-![Gameplay screenshot](./assets_readme/Screenshot%202026-10-16%20211318.png)
-
 ![Arena view](./assets_readme/Screenshot%202026-10-16%20211334.png)
 
 ![Fight moment](./assets_readme/Screenshot%202026-10-16%20211341.png)
 
 ![Game scene](./assets_readme/Screenshot%202026-10-16%20211348.png)
+
+![Main menu screen](./assets_readme/main%20menu%20screen.png)
+
+![Loading screen](./assets_readme/loaderscreen.png)
+
+![Gameplay](./assets_readme/game%20play.png)
 
 ## Project structure
 

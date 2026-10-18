@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b10bhbxnl84b7"]
+
+[ext_resource type="Texture2D" uid="uid://dvvvwcy6k7pw0" path="res://Assets/main_menu_bg.png" id="1_6b1b0"]
+[ext_resource type="Script" uid="uid://hfwexfhgbu5n" path="res://Scenes/splash_screen.gd" id="1_wwf30"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfkbx"]
+bg_color = Color(0.1433399, 0.14334005, 0.14333996, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.51100624, 0.6677599, 0.9987046, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
+shadow_color = Color(0.002136234, 0.002136234, 0.0021362337, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6b1b0"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.24643555, 0.50993264, 0.9726972, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SplashScreen" type="Node2D" unique_id=124542014]
+script = ExtResource("1_wwf30")
+
+[node name="MainMenuBg" type="Sprite2D" parent="." unique_id=1326029225]
+position = Vector2(580, 326)
+scale = Vector2(0.59999996, 0.5986112)
+texture = ExtResource("1_6b1b0")
+
+[node name="title" type="Label" parent="." unique_id=1077996927]
+offset_left = 359.0
+offset_top = 32.0
+offset_right = 901.228
+offset_bottom = 134.44565
+rotation = -0.0070500597
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 0
+theme_override_font_sizes/font_size = 70
+text = "FIGHTER GAME"
+
+[node name="StartButton" type="Label" parent="." unique_id=569532835]
+offset_left = 142.0
+offset_top = 216.0
+offset_right = 290.0
+offset_bottom = 276.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.99607843)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfkbx")
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Label" parent="." unique_id=1635675769]
+offset_left = 145.0
+offset_top = 297.0
+offset_right = 294.0
+offset_bottom = 344.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_6b1b0")
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=168640569]
+offset_left = 85.0
+offset_top = 15.0
+offset_right = 222.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21518216, 0.21518219, 0.21518219, 1)
+theme_override_font_sizes/font_size = 20
+text = "PrafAl production"

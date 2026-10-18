@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cxuv13lb0pv3a"]
+
+[ext_resource type="Texture2D" uid="uid://cfabsyjlpxdk0" path="res://Assets/loader_screen.png" id="1_bsu0l"]
+[ext_resource type="Script" uid="uid://ceicob8hc2wd4" path="res://Scenes/loader_screen.gd" id="1_fxqwo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsu0l"]
+bg_color = Color(0.18586054, 0.16365784, 0.18962306, 1)
+border_color = Color(0.7953939, 0.79539394, 0.7953938, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxqwo"]
+bg_color = Color(0.10575419, 0.26774463, 0.62484956, 1)
+
+[node name="LoaderScreen" type="Control" unique_id=51056864]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fxqwo")
+
+[node name="Logo" type="TextureRect" parent="." unique_id=76858993]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1152.0
+offset_bottom = 652.0
+texture = ExtResource("1_bsu0l")
+expand_mode = 1
+
+[node name="LoadingBar" type="ProgressBar" parent="." unique_id=575351322]
+layout_mode = 0
+offset_left = 418.00003
+offset_top = 543.00006
+offset_right = 939.8623
+offset_bottom = 589.79407
+scale = Vector2(0.68600476, 0.68384695)
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+theme_override_styles/background = SubResource("StyleBoxFlat_bsu0l")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fxqwo")
