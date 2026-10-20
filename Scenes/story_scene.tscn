@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bsgp5f3rulfst"]
+
+[ext_resource type="Script" uid="uid://chtnnrf268c7j" path="res://Scenes/story_scene.gd" id="1_7xecu"]
+[ext_resource type="Texture2D" uid="uid://cmv8kgrsjil0n" path="res://Assets/story_bg.png" id="1_glv0h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfkbx"]
+bg_color = Color(0.012058734, 0.0013090045, 0.089967586, 0.63529414)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="StoryScene" type="Control" unique_id=1208305362]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7xecu")
+gameplay_scene_path = "uid://bg5u1vx8gjipl"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2060025424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 1151.0
+offset_bottom = 645.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_glv0h")
+expand_mode = 1
+
+[node name="StoryPanel" type="Panel" parent="." unique_id=573374878]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 790.0
+offset_bottom = 481.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lfkbx")
+
+[node name="StoryText" type="Label" parent="StoryPanel" unique_id=1665637198]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 705.0
+offset_bottom = 342.0
+theme_override_font_sizes/font_size = 24
+text = "Years ago, the world was ruled by the strongest fighters, every city had its champion, and every champion fought for honor, power, and respect, but peace never lasted forever, and now two fighters stand at the edge of destiny, one seeking strength to protect everything he loves and the other seeking power to prove that no one can stand above him, their paths about to collide with only one rising as the ultimate champion, and the battle begins now. "
+autowrap_mode = 2
+
+[node name="skip" type="Button" parent="StoryPanel" unique_id=1601673431]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 400.0
+offset_right = 711.0
+offset_bottom = 431.0
+text = "Skip"

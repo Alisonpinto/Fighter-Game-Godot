@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b10bhbxnl84b7"]
 
-[ext_resource type="Texture2D" uid="uid://dvvvwcy6k7pw0" path="res://Assets/main_menu_bg.png" id="1_6b1b0"]
 [ext_resource type="Script" uid="uid://hfwexfhgbu5n" path="res://Scenes/splash_screen.gd" id="1_wwf30"]
+[ext_resource type="Texture2D" uid="uid://dxqn0u6kblvff" path="res://Assets/main_bg.png" id="2_wwf30"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfkbx"]
 bg_color = Color(0.1433399, 0.14334005, 0.14333996, 1)
@@ -32,45 +32,26 @@ script = ExtResource("1_wwf30")
 [node name="MainMenuBg" type="Sprite2D" parent="." unique_id=1326029225]
 position = Vector2(580, 326)
 scale = Vector2(0.59999996, 0.5986112)
-texture = ExtResource("1_6b1b0")
-
-[node name="title" type="Label" parent="." unique_id=1077996927]
-offset_left = 359.0
-offset_top = 32.0
-offset_right = 901.228
-offset_bottom = 134.44565
-rotation = -0.0070500597
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 0
-theme_override_font_sizes/font_size = 70
-text = "FIGHTER GAME"
+texture = ExtResource("2_wwf30")
 
 [node name="StartButton" type="Button" parent="." unique_id=1436019233]
-offset_left = 142.0
-offset_top = 216.0
-offset_right = 290.0
-offset_bottom = 276.0
+offset_left = 517.0
+offset_top = 310.0
+offset_right = 665.0
+offset_bottom = 370.0
 theme_override_colors/font_color = Color(1, 1, 1, 0.99607843)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_lfkbx")
 text = "START"
 
 [node name="ExitButton" type="Button" parent="." unique_id=2004671903]
-offset_left = 145.0
-offset_top = 297.0
-offset_right = 294.0
-offset_bottom = 344.0
+offset_left = 519.0
+offset_top = 397.0
+offset_right = 668.0
+offset_bottom = 444.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6b1b0")
 text = "EXIT"
 
-[node name="Label" type="Label" parent="." unique_id=168640569]
-offset_left = 85.0
-offset_top = 15.0
-offset_right = 222.0
-offset_bottom = 38.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.21518216, 0.21518219, 0.21518219, 1)
-theme_override_font_sizes/font_size = 20
-text = "PA Game Studio"
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
